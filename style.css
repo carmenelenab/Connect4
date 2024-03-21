@@ -1,0 +1,63 @@
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3em;
+    color: black;
+    padding-top: 5%;
+    text-shadow: 3px 3px 5px red, -3px -3px 5px darkblue;
+}
+
+body {
+    text-align: center;
+}
+
+#gameBoard {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(165, 157, 157);
+    border: 5px solid rgb(141, 136, 136);
+    border-radius: 5%;
+
+    width: 630px;
+    height: 540px;
+
+    grid-template-columns: repeat(7, 10vh);
+    grid-template-rows: repeat(6, 10vh);
+
+    margin: auto;
+    justify-content: center;
+}
+
+.cell {
+    background-color: white;
+    margin: 5px;
+
+    width: 70px;
+    height: 70px;
+
+    border-radius: 50%;
+}
+
+.blue-piece {
+    background-color: darkblue;
+    border: 3px solid rgb(65, 0, 243);
+}
+
+.red-piece {
+    background-color: rgb(233, 8, 8);
+    border: 3px solid rgb(165, 31, 31);
+}
+
+#container {
+    position: relative;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(240, 215, 185, 0.9);
+    padding: 20px;
+    z-index: 999;
+    display: none;
+}
